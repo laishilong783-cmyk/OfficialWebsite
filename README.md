@@ -1,8 +1,6 @@
-<div align="center">
-  <span style="font-size: 40px; font-weight: bold;">拓知微</span><br/><br/>
-  <span style="font-size: 40px; font-weight: bold;">InsightBit</span><br/><br/>
-  <a href="https://laishilong783-cmyk.github.io/OfficialWebsite">https://laishilong783-cmyk.github.io/OfficialWebsite</a>
-</div>
+<p align="center" style="font-size: 40px; font-weight: bold;">拓知微</p>
+<p align="center" style="font-size: 40px; font-weight: bold;">InsightBit</p>
+<p align="center"><a href="https://laishilong783-cmyk.github.io/OfficialWebsite">https://laishilong783-cmyk.github.io/OfficialWebsite</a></p>
 
 ## 技术栈
 
