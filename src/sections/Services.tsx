@@ -9,7 +9,7 @@ const services = [
     titleEn: 'Enterprise Software',
     description: '基于微服务架构的高可用企业系统，支持百万级并发，确保业务连续性。',
     icon: Code2,
-    image: '/images/service-enterprise.jpg',
+    image: 'images/service-enterprise.jpg',
   },
   {
     id: '02',
@@ -17,7 +17,7 @@ const services = [
     titleEn: 'Mobile App Development',
     description: 'iOS / Android 原生及跨平台应用开发，打造流畅的用户体验和强劲的性能表现。',
     icon: Smartphone,
-    image: '/images/service-mobile.jpg',
+    image: 'images/service-mobile.jpg',
   },
   {
     id: '03',
@@ -25,7 +25,7 @@ const services = [
     titleEn: 'Cloud Architecture',
     description: '基于 Kubernetes、Docker 的容器化部署方案，实现弹性伸缩和自动化运维。',
     icon: Cloud,
-    image: '/images/service-cloud.jpg',
+    image: 'images/service-cloud.jpg',
   },
   {
     id: '04',
@@ -33,7 +33,7 @@ const services = [
     titleEn: 'AI Integration',
     description: '将机器学习、自然语言处理和计算机视觉技术融入您的产品，释放数据价值。',
     icon: Brain,
-    image: '/images/service-ai.jpg',
+    image: 'images/service-ai.jpg',
   },
   {
     id: '05',
@@ -41,7 +41,7 @@ const services = [
     titleEn: 'UI/UX Design',
     description: '以用户为中心的产品设计方法论，打造直观、美观且高效的交互体验。',
     icon: Palette,
-    image: '/images/service-uiux.jpg',
+    image: 'images/service-uiux.jpg',
   },
 ];
 
@@ -201,7 +201,7 @@ export default function Services() {
                           {/* Image — 右侧小缩略图，与文字并排 */}
                           <div className="w-full sm:w-48 lg:w-56 aspect-video rounded-lg overflow-hidden shadow-md shrink-0">
                             <img
-                              src={service.image}
+                              src={import.meta.env.BASE_URL + service.image}
                               alt={service.title}
                               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                               loading="lazy"
