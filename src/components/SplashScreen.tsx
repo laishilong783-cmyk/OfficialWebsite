@@ -71,6 +71,7 @@ export default function SplashScreen({ onEnter, onPhaseChange }: SplashScreenPro
   // 触摸移动：移动端支持
   const handleTouchMove = useCallback((e: React.TouchEvent) => {
     if (phase !== 'ready') return;
+    e.preventDefault();
     const touch = e.touches[0];
     if (!touch) return;
     const rect = containerRef.current?.getBoundingClientRect();
@@ -78,6 +79,12 @@ export default function SplashScreen({ onEnter, onPhaseChange }: SplashScreenPro
     targetX.current = touch.clientX - rect.left - rect.width / 2;
     if (!mouseActive) setMouseActive(true);
   }, [phase, mouseActive]);
+
+  // 触摸开始：阻止默认行为，确保 touchmove 能持续触发
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    if (phase !== 'ready') return;
+    e.preventDefault();
+  }, [phase]);
 
   // ready 阶段：raf 循环同步更新放大镜和文字
   useEffect(() => {
@@ -140,9 +147,11 @@ export default function SplashScreen({ onEnter, onPhaseChange }: SplashScreenPro
         transition: 'opacity 1200ms ease 600ms',
         pointerEvents: isFading ? 'none' : 'auto',
         background: isDark ? '#080f1e' : 'white',
+        touchAction: 'none',
       }}
       onMouseMove={handleMouseMove}
       onTouchMove={handleTouchMove}
+      onTouchStart={handleTouchStart}
       onClick={handleClick}
     >
       {/* 微网格背景 */}
