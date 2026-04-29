@@ -1,17 +1,15 @@
 <div align="center">
 
-<h1><b>拓知微</b></h1>
-<h1><b>InsightBit</b></h1>
+<p style="font-size: 40px; font-weight: bold; margin: 8px 0;">拓知微</p>
+<p style="font-size: 40px; font-weight: bold; margin: 8px 0;">InsightBit</p>
 
-<h3>
+<p style="font-size: 18px; margin-top: 16px;">
   <a href="https://laishilong783-cmyk.github.io/OfficialWebsite">
     https://laishilong783-cmyk.github.io/OfficialWebsite
   </a>
-</h3>
+</p>
 
 </div>
-
----
 
 ## 技术栈
 
