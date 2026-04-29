@@ -148,7 +148,7 @@ export default function Contact() {
             {/* Social */}
             <div className="flex items-center gap-4">
               {[
-                { label: 'GitHub', href: 'https://github.com' },
+                { label: 'GitHub', href: 'https://github.com/laishilong783-cmyk/OfficialWebsite' },
                 { label: 'LinkedIn', href: 'https://linkedin.com' },
               ].map((social) => (
                 <a
