@@ -337,7 +337,6 @@ function Scene() {
     <>
       <TwinklingStars />
       <MilkyWay />
-      <Nebula />
     </>
   );
 }
