@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsightBit - 拓知微科技</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function() {
+        function hideDeployBadge() {
+          var children = document.body.children;
+          for (var i = children.length - 1; i >= 0; i--) {
+            var el = children[i];
+            if (el.id === 'root') continue;
+            var rect = el.getBoundingClientRect();
+            var style = window.getComputedStyle(el);
+            if (
+              (el.tagName === 'IFRAME' || el.tagName === 'DIV') &&
+              style.position === 'fixed' &&
+              rect.width < 200 &&
+              rect.height < 100 &&
+              rect.bottom < 30 &&
+              rect.right < 30
+            ) {
+              el.style.display = 'none';
+            }
+          }
+        }
+        setTimeout(hideDeployBadge, 1500);
+        setInterval(hideDeployBadge, 3000);
+      })();
+    </script>
+  </body>
+</html>
